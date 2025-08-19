@@ -67,12 +67,12 @@
 
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A] bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-lg">
-        <div class="container mx-auto px-4 py-3 flex justify-center space-x-6 md:space-x-12">
-            <a href="#intro" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300">Intro</a>
-            <a href="#education" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300">Education</a>
-            <a href="#projects" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300">Projects</a>
-            <a href="#skills" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300">Skills</a>
-            <a href="#other-details" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300">Other Details</a>
+        <div class="container mx-auto px-4 py-3 flex justify-center space-x-6 md:space-x-12 overflow-x-auto">
+            <a href="#intro" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300 whitespace-nowrap">Intro</a>
+            <a href="#education" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300 whitespace-nowrap">Education</a>
+            <a href="#projects" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300 whitespace-nowrap">Projects</a>
+            <a href="#skills" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300 whitespace-nowrap">Skills</a>
+            <a href="#other-details" class="nav-link text-sm md:text-base text-[#E0E0E0] hover:text-[#C0C0C0] transition-colors duration-300 whitespace-nowrap">Other Details</a>
         </div>
     </nav>
 
@@ -324,6 +324,7 @@
             let isScrolling = false;
 
             const updateScroll = (index) => {
+                if (!sections[index]) return;
                 if (isScrolling) return;
                 isScrolling = true;
                 const scrollX = sections[index].offsetLeft;
